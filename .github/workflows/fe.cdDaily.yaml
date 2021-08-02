@@ -23,6 +23,10 @@ on:
         description: 'upload path'
         required: true
         default: 'build'
+      need_package_json:
+        description: 'if project need package.json'
+        required: true
+        default: 'true'
 
 jobs:
   pre-check:

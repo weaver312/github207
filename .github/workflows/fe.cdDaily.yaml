@@ -1,6 +1,6 @@
 name: FE Project CI
 
-true:
+on:
   workflow_dispatch:
     inputs:
       version:
@@ -32,7 +32,6 @@ jobs:
 
       - name: check config files
         run: ${{github.event.inputs.need_package_json}} && ( test -f ./package.json && exit 0 || (echo 'package.json is not exist!' && exit 1) )
-
 
   build-and-deploy:
     runs-on: ubuntu-latest
